@@ -1,9 +1,6 @@
 # Flask RESTful CRUD API and Flask App
 
-## Run 
-`cd` into directory containing `app.py` and `EmployeeDB` directory and run this command :
-
-    python app.py
+---
 
 ### Project Structure 
 
@@ -31,15 +28,34 @@ project
 - The EmployeeDB package contains the project files.
 
 ### Flask RESTful
-- `apis.py` contains the api's for the flask app
+- `apis.py` contains the api's for the flask app.
 ### Flask App
-- `routes.py` - URL routes for the App 
-- `forms.py` - Forms for the App
-- `models.py` - Database Model
+- `routes.py` - URL routes for the App .
+- `forms.py` - Forms for the App.
+- `models.py` - Database Model.
 
 ### init.py
 
 Project configuration files, imports, other initializations.
+
+
+## Run 
+`cd ` into directory containing `app.py` and `EmployeeDB` directory.
+
+    $ flask shell
+    
+In the Shell, type the following commands:
+
+    >>> from EmployeeDB.models import Employees
+    >>> from EmployeeDB import db
+    
+    >>> db.create_all()
+    
+**Exit** and **Run** the app with :
+
+     python app.py
+     
+---
 
 
 
