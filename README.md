@@ -1,7 +1,7 @@
 # Flask RESTful CRUD API and Flask App
 
 ## Run 
-`cd ` into directory containing `app.py` and `EmployeeDB` directory and run this command :
+`cd` into directory containing `app.py` and `EmployeeDB` directory and run this command :
 
     python app.py
 
