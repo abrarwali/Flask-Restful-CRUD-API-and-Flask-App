@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div>
+        <br>
+        <legend class="border-bottom mb-4"> Details for {{ employee.name }} </legend>
+        <p> <b>Name: </b>{{ employee.name }}</p>
+        <p> <b>Role:</b>{{ employee.role }}</p>
+        <p> <b>Email: </b>{{ employee.email }}</p>
+        <p> <b>Department: </b>{{ employee.department }}</p>
+        <p> <b>Gender: </b> {{ employee.gender }}</p>
+    </div>
+    <a class="btn btn-outline-info" href="{{ url_for('update', employees_id=employee.id) }}">Update Details</a>
+    <form action="{{ url_for('delete', employees_id=employee.id) }}" method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+        <input class="btn btn-danger mt-2" type="submit" value="Delete">
+    </form>
+{% endblock content %}

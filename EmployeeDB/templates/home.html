@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <br>
+    <legend class="border-bottom mb-4"> Employees/Interns </legend>
+    {% for employee in employees %}
+        <section class="">
+          <a href="{{ url_for('detail',employees_id=employee.id) }}">{{ employee.name }}</a>
+        </section>
+    {% endfor %}
+{% endblock %}
